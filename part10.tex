@@ -1,0 +1,211 @@
+% !TEX root = RailVehicleIntroduction.tex
+\section{Vehicle design}
+
+\subsection{Carbody design}
+\frame{\frametitle{Requirements on the car body}
+\framesubtitle{}
+\begin{itemize}
+\item  Strength (e.g. EN 12663):
+\begin{itemize}
+	\item Compressive/tensile force in train
+	\item Crashworthiness (e.g. EN 15227)
+	\item Pressure shocks, tightness
+	\item Forces due to load
+	\item Oscillations
+\end{itemize}
+\item Customer and operational requirements
+\begin{itemize}
+	\item Life cycle
+	\item Maintainability
+	\item Lightweight design
+	\item Recycling
+\end{itemize}
+\item Normative Requirements
+\begin{itemize}
+	\item Fire \& Smoke (e.g. EN 45545)
+	\item Toxiticity (e.g. EG 1907/2006 REACH)
+\end{itemize}
+\end{itemize}
+}
+
+\frame{\frametitle{Main elements of the car body}
+\framesubtitle{}
+\begin{columns}[t] 
+     \begin{column}[T]{6cm} 
+     	\begin{itemize}
+     		\item Underframe
+		\begin{itemize}
+		\item Central or side rails
+		\item Beams
+		\end{itemize}
+		\item Side walls
+		\item Roof
+		\item Front wall
+		\item Cab module
+   	\end{itemize}
+     \end{column}
+     	\begin{column}[T]{6cm} 
+         	\begin{center}
+            		\includegraphics[width=0.8\textwidth]{FrontNose}
+		\rotatebox{90}{\tiny \color{gray}{Source: Voith Press Image}}
+        		\end{center}
+     \end{column}
+ \end{columns}
+}
+
+
+\frame{\frametitle{Design principles of car body design}
+\framesubtitle{}
+\begin{columns}[t] 
+\begin{column}[T]{.5cm}
+\end{column} 
+     \begin{column}[T]{5.5cm} 
+     \textbf{Differential design} \vspace{.2cm}
+     	\begin{itemize}
+     		\item Manufacturing from semis:
+		\begin{itemize}
+		\item Parts of simple shape
+		\item Car shape due to joining and bending
+		\end{itemize}
+     	\end{itemize}
+	\textbf{Integral design}
+     	\begin{itemize}
+     		\item Manufacturing from complex shaped parts:
+		\begin{itemize}
+		\item e.g. extruded profiles
+		\item Car shape due to joining and cutting
+		\end{itemize}
+     	\end{itemize}
+	\textbf{Load bearing}
+     	\begin{itemize}
+     		\item Supporting frame
+		\item Self supporting car body
+	\end{itemize}
+     \end{column}
+     	\begin{column}[T]{6cm} 
+         	\begin{center}
+            		\includegraphics[width=0.8\textwidth]{Integral}\rotatebox{90}{\tiny \color{gray} Source: Siemens Press Image}
+        		\end{center}
+     \end{column}
+ \end{columns}
+}
+
+
+\frame{\frametitle{Car body materials}
+\framesubtitle{}
+\begin{itemize}
+\item Stahl:
+\begin{itemize}
+	\item Classic: engineering steels E235, E355
+	\item For particular applications: stainless steels, e.g. X5CrNi18-10
+	\item Well suited for joining
+	\item Fatigue strength and elastic/plastic behaviour well behaved
+\end{itemize}
+\item Aluminium:
+\begin{itemize}
+	\item Lower density, lower strength
+	\item Fatigue limit more difficult
+	\item Welding beads susceptible to fatigue
+\end{itemize}
+\item Plastics:
+\begin{itemize}
+	\item Typically fibre reinforced (Glass, Carbon)	
+	\item Enable integral design and integration of functions
+	\item Also in form of sandwich materials 
+\end{itemize}
+\item Honeycomb and foams:
+\begin{itemize}
+	\item Applied mainly in crash deformation area
+\end{itemize}
+\end{itemize}
+}
+
+
+\frame{\frametitle{Lightweight design of car bodies}
+\framesubtitle{}
+\begin{itemize}
+\item Make all components load bearing
+\item Well bearable:
+\begin{itemize}
+	\item Longitudinal forces
+\end{itemize}
+\item Needs additional cross section:
+\begin{itemize}
+	\item Torques and moments
+\end{itemize}
+\item High strength materials slowly accepted
+\begin{itemize}
+	\item Doubts on maintainability and life cycle
+\end{itemize}
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Class66}
+\end{center}
+}
+
+
+\subsection{Loading gauge}
+
+\frame{\frametitle{Loading gauge}
+\framesubtitle{}
+%\begin{columns}[t] 
+%     \begin{column}[T]{6cm} 
+     	\begin{itemize}
+		\item Load gauge needs to encompass
+		\begin{itemize}
+		\item Loading condition
+		\item Dynamical movements
+		\item Curving
+		\item Compatibility to other vehicles
+		\end{itemize}
+     	\end{itemize}
+%     \end{column}
+%     	\begin{column}[T]{6cm} 
+         	\begin{center}
+            		\includegraphics[width=0.7\textwidth]{G1G2}\source{Source: Christian Lindecke}
+        		\end{center}
+%		\end{column}
+%		\end{columns}
+     }
+
+
+%\offslide{Breiteneinschr\"ankung und Lichtraumbedarf}
+
+\frame{\frametitle{Wheelset and linear loads}
+\framesubtitle{}
+\begin{columns}[t] 
+     \begin{column}[T]{6cm} 
+     	\begin{itemize}
+     		\item Limitation of wheelset (axle) load:
+		\begin{itemize}
+		\item Acc. to track category
+		\item Normative, e.g. TSI Loc\&Pas (for HSR), EN 15528
+		\end{itemize}
+		\item Limitation of linear load
+		\begin{itemize}
+		\item e.g. bridges, track ballast
+		\end{itemize}
+     	\end{itemize}
+     \end{column}
+     	\begin{column}[T]{6cm} 
+         	\begin{center}
+		\begin{tabular}{|c|c|c|}
+		\hline
+			Class & Wheelset load & Linear load \\ \hline
+			A & 16 t & 5{,}0 t/m \\ \hline
+			B1 & 18 t & 5{,}0 t/m \\ \hline
+			B2 & 18 t & 6{,}4  t/m \\ \hline
+			C2 & 20 t & 6{,}4  t/m \\ \hline
+			C3 & 20 t & 7{,}2  t/m \\ \hline
+			C4 & 20 t & 8{,}0  t/m \\ \hline
+			D2 & 22{,}5 t & 6{,}4  t/m \\ \hline
+			D3 & 22{,}5 t & 7{,}2  t/m \\ \hline
+			D4 & 22{,}5 t & 8{,}0  t/m \\ \hline
+			E4 & 25 t & 8{,}0  t/m \\ \hline
+			E5 & 25 t & 8{,}8  t/m \\ \hline
+		\end{tabular}
+        		\end{center}
+     \end{column}
+ \end{columns}
+}
+

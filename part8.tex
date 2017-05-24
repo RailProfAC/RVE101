@@ -1,0 +1,123 @@
+% !TEX root = RailVehicleIntroduction.tex
+\addtocontents{toc}{\protect\newpage}
+\section{Track guidance}
+\subsection{Track gauges}
+
+\frame{
+\frametitle{Track gauge}
+\framesubtitle{}
+\begin{columns}[t] 
+     \begin{column}[T]{5cm} 
+     	\begin{itemize}
+     		\item Track gauge
+		\begin{itemize}
+		\item Based on economic and military motives:
+		\end{itemize}
+		\begin{itemize}
+		\item Standard gauge: 1435 mm
+		\item Wide gauge
+		\begin{itemize}
+		\item Russian: 1520 mm
+		\item Indian: 1676 mm
+		\item Iberian: 1668 mm
+		\end{itemize}
+		 \item Narrow gauge
+		 \begin{itemize}
+		\item Cape: 1067 mm
+		\item Meter: 1000 mm
+		\end{itemize}
+		\end{itemize}
+     	\end{itemize}
+     \end{column}
+     	\begin{column}[T]{7cm} 
+         	\begin{definition}[Track gauge]
+            		The track gauge is the distance between the rails, measured $(14{,}5 \pm 0{,}5) \, \mathrm{mm}$ below top of rail. 
+        		\end{definition}
+		\begin{definition}[Gauge tolerance]
+						Depending on network and track, the gauge has to be within certain tolerances. Common in Europe is $\left(1435^{+35}_{-5} \right)\, \mathrm{mm}$. 
+        		\end{definition}
+     \end{column}
+ \end{columns}
+ \begin{center}
+ \includegraphics[width = 0.5\textwidth]{Trackgauge}
+ \end{center}
+ \note{
+ \begin{itemize}
+		\item Wie h\"angen r\"omische Soldaten und der Durchmesser der Space Shuttle-Tanks zusammen?
+		\item Bezeichnung indische Loks.
+		\end{itemize}
+ }
+}
+
+\frame{\frametitle{Geographic distribution of track gauges}
+\framesubtitle{}
+\begin{center}
+\includegraphics[width = 0.9\textwidth]{Railgaugeworld}\rotatebox{90}{{\tiny \color{gray} Source: Wikimedia Commons/Jackdude101}}
+\end{center}
+}
+
+\subsection{Introduction to running stability}
+
+\frame{\frametitle{Hunting oscillation}
+\begin{center}
+\begin{tikzpicture}[scale = 0.9, domain=0:4.8]
+\path[ultra thick, draw = blue!80!black, name path = track1] (0,0) -- (12,0);
+\draw[ultra thick, draw = blue!80!black, name path = track2] (0,4) -- (12,4);
+\only<1>{
+\begin{scope}[shift = {(0,-.2)}]
+\draw[thick, fill = gray!30, fill opacity = .5] (.5, -.3) -- +(-.2, .6) -- +(2,0.6) -- +(1.8,0) -- +(0,0);
+\draw[thick, fill = gray!30, fill opacity = .5] (.5, 4.3) -- +(-.2, -.6) -- +(2,-0.6) -- +(1.8,0) -- +(0,0);
+\draw[thick, fill = gray!30, fill opacity = .5] (1.2, .3) -- +(0, 3.4) -- +(.4, 3.4) -- +(.4,0) -- +(0,0);
+\end{scope}
+}
+\only<2>{
+\begin{scope}[shift = {(0,-.2)}]
+\draw[name path = ws1, thick, fill = gray!30, fill opacity = .5] (.5, -.3) -- +(-.2, .6) -- +(2,0.6) -- +(1.8,0) -- +(0,0);
+\path [name intersections={of = track1 and ws1}, draw = red!80!black];
+\coordinate (A)  at (intersection-1);
+\coordinate (B)  at (intersection-2);
+\draw[ultra thick, red] (A) -- (B)node[pos =.5, below] {R};
+\draw[thick, red] (A) -- +(0,4);
+\draw[thick, red] (B) -- +(0,4);
+\draw[name path = ws2, thick, fill = gray!30, fill opacity = .5] (.5, 4.3) -- +(-.2, -.6) -- +(2,-0.6) -- +(1.8,0) -- +(0,0);
+\path [name intersections={of = track2 and ws2}, draw = red!80!black];
+\coordinate (C)  at (intersection-1);
+\coordinate (D)  at (intersection-2);
+\draw[ultra thick, red] (C) -- (D) node[pos =.5, above] {r};
+
+\draw[thick, fill = gray!30, fill opacity = .5] (1.2, .3) -- +(0, 3.4) -- +(.4, 3.4) -- +(.4,0) -- +(0,0);
+\end{scope}
+}
+\only<3->{
+\begin{scope}[shift = {(0,-.2)}]
+\draw[thick, fill = gray!30, fill opacity = .5] (.5, -.3) -- +(-.2, .6) -- +(2,0.6) -- +(1.8,0) -- +(0,0);
+\draw[thick, fill = gray!30, fill opacity = .5] (.5, 4.3) -- +(-.2, -.6) -- +(2,-0.6) -- +(1.8,0) -- +(0,0);
+\draw[thick, fill = gray!30, fill opacity = .5] (1.2, .3) -- +(0, 3.4) -- +(.4, 3.4) -- +(.4,0) -- +(0,0);
+\end{scope}
+\begin{scope}[shift = {(3,0)}, rotate = 3]
+\draw[thick, fill = gray!30, fill opacity = .5] (.5, -.3) -- +(-.2, .6) -- +(2,0.6) -- +(1.8,0) -- +(0,0);
+\draw[thick, fill = gray!30, fill opacity = .5] (.5, 4.3) -- +(-.2, -.6) -- +(2,-0.6) -- +(1.8,0) -- +(0,0);
+\draw[thick, fill = gray!30, fill opacity = .5] (1.2, .3) -- +(0, 3.4) -- +(.4, 3.4) -- +(.4,0) -- +(0,0);
+\end{scope}
+}
+\only<4->{
+\begin{scope}[shift = {(6, .2)}]
+\draw[thick, fill = gray!30, fill opacity = .5] (.5, -.3) -- +(-.2, .6) -- +(2,0.6) -- +(1.8,0) -- +(0,0);
+\draw[thick, fill = gray!30, fill opacity = .5] (.5, 4.3) -- +(-.2, -.6) -- +(2,-0.6) -- +(1.8,0) -- +(0,0);
+\draw[thick, fill = gray!30, fill opacity = .5] (1.2, .3) -- +(0, 3.4) -- +(.4, 3.4) -- +(.4,0) -- +(0,0);
+\end{scope}
+}
+\only<5->{
+\begin{scope}[shift = {(9,0)}, rotate = -3]
+\draw[thick, fill = gray!30, fill opacity = .5] (.5, -.3) -- +(-.2, .6) -- +(2,0.6) -- +(1.8,0) -- +(0,0);
+\draw[thick, fill = gray!30, fill opacity = .5] (.5, 4.3) -- +(-.2, -.6) -- +(2,-0.6) -- +(1.8,0) -- +(0,0);
+\draw[thick, fill = gray!30, fill opacity = .5] (1.2, .3) -- +(0, 3.4) -- +(.4, 3.4) -- +(.4,0) -- +(0,0);
+\end{scope}
+}
+\only<6>{
+\draw[thick, dashed, color=green!70!black]   plot (1.4+6/3.14*\x,{2-cos(\x r)});
+}
+\end{tikzpicture}
+\end{center}
+}
+

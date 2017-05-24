@@ -1,0 +1,121 @@
+\documentclass[slidestop,compress,mathserif]{beamer}
+\usepackage{etex}
+\usepackage[bars]{beamerthemetree} % Beamer theme v 2.2
+\usetheme{Madrid} % Beamer theme v 3.0
+\usecolortheme{seagull} % Beamer color theme
+\usepackage{bibentry}
+\usepackage[round]{natbib}
+\usepackage{graphicx}
+\usepackage{epigraph}
+\usepackage{makeidx}
+\makeindex
+\usepackage[]{amsmath}
+\usepackage{pgfcalendar}
+\usepackage[]{amssymb}
+\usepackage{color}
+\usepackage{pict2e}
+\usepackage{algorithm2e}
+\usepackage[ngerman]{babel}
+\usepackage{tikz}
+\usetikzlibrary{decorations}
+\usetikzlibrary{calc}
+\usetikzlibrary{scopes}
+\usetikzlibrary{arrows}
+\usetikzlibrary{mindmap}
+\usetikzlibrary{shapes}
+\usetikzlibrary{intersections}
+\usetikzlibrary{patterns}
+\usepackage{multirow}
+\usepackage[utf8]{inputenc}
+\usepackage{multimedia}
+\usepackage{xcolor}
+\usepackage{keyval}
+\usepgfmodule{shapes}
+\usepackage{sfmath}
+\usepackage{pgfplots}
+\usepackage{sansmath}
+\usepackage{siunitx}
+\usepackage{multirow}
+\usepackage{tikz-3dplot}
+\usepackage{wasysym}
+
+%\definecolor{blue}{rgb}{0,0,1}
+%\definecolor{mint}{cmyk}{75,0,40,0}
+\definecolor{mint}{rgb}{32,178,170}
+\graphicspath{{../../figures/}}
+
+\AtBeginSection{\frame{\sectionpage}}
+\AtBeginSubsection{\frame{\subsectionpage}}
+
+\pgfplotsset{width=5cm, height = 5 cm,
+	tick label style = {font=\sansmath\sffamily},
+  every axis label = {font=\sansmath\sffamily},
+  legend style = {font=\sansmath\sffamily},
+  label style = {font=\sansmath\sffamily}}
+
+\setbeamersize{text margin left=.7cm}
+
+\begin{document}
+\tdplotsetmaincoords{70}{115}
+
+\tikzstyle{element} = [draw,rectangle, align = center, text width = 2.5 cm, node distance = 1.25 cm]
+
+\newcommand\mydots{\makebox[1em][c]{.\hfil.\hfil.}}
+
+%% Formalia
+\newcommand{\revision}{Rev. 00}
+\newcommand{\docnum}{\jobname}
+\newcommand{\offslide}[2]{\frame{\frametitle{ \includegraphics[scale=0.01] {Off}\hspace{1.5mm} #1}
+\framesubtitle{#2}
+}}
+\newcommand{\source}[1]{\rotatebox{90}{\tiny \color{gray} #1}}
+
+
+\title{Introduction to Rail Vehicle Engineering}
+\subtitle{}
+\author[R. Pfaff]{Prof. Dr. Raphael Pfaff}
+\institute[\docnum, \revision]{Aachen University of Applied Sciences}
+\logo{\put(-362, 0){\includegraphics[width=0.6cm]{logo.jpg}}}
+
+% Pr\"aliminarien
+\include{part1}
+
+%System\"uberblick
+\include{part2}
+
+% Grundlagen
+\include{part3}
+
+% Anforderungen
+%\include{part4}
+
+% G\"uterwagen
+%\include{part5}
+
+% Personenfahrzeuge
+%\include{part6}
+
+% Einf\"uhrung Zugdynamik
+\include{part7}
+
+% Einf\"uhrung Spurf\"uhrung
+\include{part8}
+
+% Zugdynamik
+%\include{part9}
+
+%Fahrzeugkonstruktion
+\include{part10}
+
+%Laufwerk
+\include{part11}
+
+
+%\frame[allowframebreaks]{\frametitle{Literatur}
+%\framesubtitle{}
+%\nocite{wende}
+%\bibliographystyle{plainnat}
+%\bibliography{../bib}
+%}
+
+\end{document}
