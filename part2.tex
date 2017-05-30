@@ -1,0 +1,97 @@
+% !TEX root = SFV-14033_SFT1.tex
+\section{System overview}
+%\frame{\sectionpage}
+
+\frame{\frametitle{Definition of a Rail Vehicle}
+\framesubtitle{Definition according to German norm DIN 25003}
+\begin{definition}[Rail Vehicles]
+Track guided vehicles,  which are guided and borne on tracks with a defined, constant track gauge on wheels that feature a flange.
+\end{definition}
+}
+
+\subsection{Systematic of railways}
+\frame{\frametitle{Systematic of railways}
+\framesubtitle{Systematic according to traffic purpose and distance.}
+\begin{center}
+\begin{tikzpicture}[thick]
+		%\tiny
+  \node[draw,rectangle, anchor = west] (a) {Railways};
+  \node[element, below of = a, left of = a, anchor = east] (b) {Transit};
+  \node[element, below of = a, right of = a, anchor = west] (c) {Freight};
+ 
+   \node[element, below of = b, left of = b, anchor = east] (e) {Long distance}; 
+  \node[element, below of= e](f) {Regional};
+  \node[element, below of=f] (g) {Intercity};
+  \node[element, below of=g] (h) {High Speed Rail};
+  
+  
+  
+ \node[element, below of = b, right of = b, anchor = west] (j) {Mass transit};
+  \node[element, below of= j](k) {{Tram}};
+  \node[element, below of=k] (l) {{Metro}};
+
+%\node[element, below of=k] (l) {Triebzug \textit{Multiple Unit}};
+ 
+
+    \draw[-] (a) -| (b);
+     \draw[-] (a) -| (c);
+    
+    \draw[-] (b) -| (e);
+    \draw[-] (b) -| (j); 
+    
+    \draw[-] (e) -- (f);
+    \draw[-] (f) -- (g);
+    \draw[-] (g) -- (h);
+    
+    \draw[-] (j) -- (k);
+    \draw[-] (k) -- (l);
+    
+\end{tikzpicture}
+\end{center}
+}
+
+\subsection{Systematic of rail vehicles}
+\frame{\frametitle{Systematic of rail vehicles}
+\framesubtitle{}
+\begin{center}
+\tikzstyle{element} = [draw,rectangle, align = center, text width = 2.5 cm, node distance = 1.25 cm]
+\begin{tikzpicture}[thick]
+		%\tiny
+  \node[draw,rectangle] (a) {Rail vehicles};
+  \node[right of = a] (a1) {};
+  \node[draw,rectangle, below of=a, minimum width = 4 cm, left of = a, anchor = east] (b) {Standard vehicles};
+  \node[left of = b] (b1) {};
+  \node[right of = b] (b2) {};
+  \node[draw,rectangle,below of=a, right of = a, anchor = west] (c) {Special vehicles}; 
+   \node[element, below of=b, left of = b, anchor = east] (d) {Cars};
+    \node[element, below of=d] (f) {Wagons};
+\node[element, below of=f] (g) {Coaches};
+\node[element, below of=g] (h) {Others};
+
+  \node[element, below of = b, right of = b, anchor = west] (e) {Motive power unit}; 
+  \node[element, below of=e] (j) {Locomotives};
+\node[element, below of=j] (k) {Railcar};
+\node[element, below of=k] (l) {{Multiple Unit}};
+ 
+
+    \draw[-] (a) |- (b);
+    \draw[-] (a) |- (c);
+    \draw[-] (b) |- (d);
+    \draw[-] (b) |- (e);
+    
+    \draw[-] (d) -- (f);
+    \draw[-] (f)  -- (g);
+    \draw[-] (g) -- (h);
+    
+    \draw[-] (e) -- (j);
+    \draw[-] (j)  -- (k);
+    \draw[-] (k) -- (l);
+  
+\end{tikzpicture}
+\end{center}
+}
+
+%\offslide{Fahrzeuggattungen}{Tafelbild 6}
+
+
+
